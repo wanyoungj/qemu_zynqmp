@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     flex \
     wget unzip python \ 
     libpixman-1-dev \
-    libfdt-dev
+    libfdt-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # get and configure qemu source
