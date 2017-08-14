@@ -20,7 +20,7 @@ RUN wget https://github.com/Xilinx/qemu/archive/xilinx-v2017.2.zip && unzip xili
 RUN cd qemu-xilinx-v2017.2 && ./configure --target-list="aarch64-softmmu,microblazeel-softmmu" --enable-fdt --disable-kvm --disable-xen
 
 # Deploy qemu
-RUN make && make install
+RUN cd /qemu-xilinx-v2017.2 && make && make install
 RUN mkdir /share_fs
 
 # Network setting
